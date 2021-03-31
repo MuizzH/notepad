@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    font-family: "monstserrat", sans-serif;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    margin-left: 10px;
+}
+
+.setup {
+    margin-left: 10px;
+}
+
+.look {
+    margin: 10px 0;
+    padding: 8px;
+    margin-left: 22%;
+    width: 15%;
+    font-family: "monstserrat", sans-serif;
+}
+
+.fontsize {
+    margin: 10px 0;
+    padding: 8px;
+    width: 10%;
+    font-family: "monstserrat", sans-serif;
+}
+
+.upper {
+    margin: 10px 0;
+    padding: 8px;
+    width: 10%;
+    background-color: rgb(196, 195, 195);
+    margin-left: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    font-size: 14px;
+}
+
+.upper:hover{
+    background-color: rgb(43, 146, 103);
+    transition: 0.5s;
+    color: white;
+}
+
+textarea {
+    width: 800px;
+    height: 450px;
+    margin-left: 20%;
+    font-family: "monstserrat", sans-serif;
+}
