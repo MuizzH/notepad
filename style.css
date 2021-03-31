@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: aliceblue;
-    font-family: "monstserrat", sans-serif;
+    font-family: sans-serif;
 
 }
 
@@ -23,7 +23,8 @@ h3 {
     padding: 8px;
     margin-left: 22%;
     width: 15%;
-    font-family: "monstserrat", sans-serif;
+    font-family: sans-serif;
+    
 }
 
 .fontsize {
