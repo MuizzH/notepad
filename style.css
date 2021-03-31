@@ -30,7 +30,7 @@ h3 {
     margin: 10px 0;
     padding: 8px;
     width: 10%;
-    font-family: "monstserrat", sans-serif;
+    font-family: sans-serif;
 }
 
 .upper {
@@ -56,5 +56,5 @@ textarea {
     width: 800px;
     height: 450px;
     margin-left: 20%;
-    font-family: "monstserrat", sans-serif;
+    font-family: sans-serif;
 }
