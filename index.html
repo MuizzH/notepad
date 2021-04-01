@@ -9,6 +9,7 @@
     <script src="java.js"></script>
 </head>
 <body>
+    
     <h2>Notepad</h2>
     <h3>Tools</h3>
     <div class="setup">
@@ -41,68 +42,13 @@
 
         <br>
 
-        <textarea placeholder="Enter your text here..." id="contentArea" rows="20" cols="150">
+        <textarea placeholder="Enter your text here..." id="contentArea" rows="30" cols="150">
 
         </textarea>
 
         <input type ="reset" value="Clear" onclick="remove()">
-        <input type ="button" value="Reset" class ="normal" onlick="reset()">
+        <input type ="button" value="Save" onlick="save()">
+
     </div>
-
-    <script>
-        function changeFont(font) {
-        document.getElementById('contentArea').style.fontFamily=font.value;
-    }
-
-        function changeSize(n) {
-        var s=document.getElementById('contentArea')
-        s.style.fontSize=n.value+'px';
-    }
-
-        function Bold(){
-
-        var bol=document.getElementById('contentArea').style.fontWeight;
-        if(bol=='normal'){
-            document.getElementById('contentArea').style.fontWeight='bold';
-    }
-        else{
-            document.getElementById('contentArea').style.fontWeight='normal';
-    }
-}
-
-    function italic(){
-    
-    var bol=document.getElementById('contentArea').style.fontStyle;
-    if(bol=='normal'){
-        document.getElementById('contentArea').style.fontStyle='Italic';
-    }
-    else{
-        document.getElementById('contentArea').style.fontStyle='normal';
-    }
-}
-
-    function underline(){
-    
-    var bol=document.getElementById('contentArea').style.textDecoration;
-    if(bol !=='underline'){
-        document.getElementById('contentArea').style.textDecoration='underline';
-    }
-    else{
-        document.getElementById('contentArea').style.textDecoration='none';
-    }
-}
-
-    function reset(){
-        document.getElementById("contentArea").style.fontStyle="Normal";
-        document.getElementById("contentArea").style.textDecoration="none";
-        document.getElementById("contentArea").style.fontWeight="normal";
-
-    }
-
-    function remove() {
-        document.getElementById("contentArea").value="";
-    }
-
-    </script>
 </body>
 </html>
