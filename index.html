@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notepad using javaScript</title>
     <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
 </head>
 <body>
     <h2>Notepad</h2>
     <h3>Tools</h3>
     <div class="setup">
-        <select class="look">
+        <select class="look" onchange="changeFont(this)">
             <option value="Arial">Arial</option>
             <option value="Sans Serif">Sans Serif</option>
             <option value="Times New Roman">Times New Roman</option>
@@ -19,7 +20,7 @@
             <option value="Courier New">Courier New</option>
             <option value="Montserrat">Montserrat</option>
         </select>
-        <select class="fontsize">
+        <select class="fontsize" onchange="changeSize(this)">
             <option>8</option>
             <option>10</option>
             <option>12</option>
@@ -34,13 +35,74 @@
             <option>30</option>
         </select>
 
-        <input type ="button" value="Bold" class ="upper">
-        <input type ="button" value="Italic" class ="upper">
-        <input type ="button" value="Underline" class ="upper">
+        <input type ="button" value="Bold" class ="upper" onclick="Bold()">
+        <input type ="button" value="Italic" class ="upper" onclick='italic()'>
+        <input type ="button" value="Underline" class ="upper" onclick='underline()'>
 
         <br>
 
-        <textarea placeholder="Enter your text here..." id="contentArea" rows="20" cols="150"></textarea>
+        <textarea placeholder="Enter your text here..." id="contentArea" rows="20" cols="150">
+
+        </textarea>
+
+        <input type ="reset" value="Clear" onclick="remove()">
+        <input type ="button" value="Reset" class ="normal" onlick="reset()">
     </div>
+
+    <script>
+        function changeFont(font) {
+        document.getElementById('contentArea').style.fontFamily=font.value;
+    }
+
+        function changeSize(n) {
+        var s=document.getElementById('contentArea')
+        s.style.fontSize=n.value+'px';
+    }
+
+        function Bold(){
+
+        var bol=document.getElementById('contentArea').style.fontWeight;
+        if(bol=='normal'){
+            document.getElementById('contentArea').style.fontWeight='bold';
+    }
+        else{
+            document.getElementById('contentArea').style.fontWeight='normal';
+    }
+}
+
+    function italic(){
+    
+    var bol=document.getElementById('contentArea').style.fontStyle;
+    if(bol=='normal'){
+        document.getElementById('contentArea').style.fontStyle='Italic';
+    }
+    else{
+        document.getElementById('contentArea').style.fontStyle='normal';
+    }
+}
+
+    function underline(){
+    
+    var bol=document.getElementById('contentArea').style.textDecoration;
+    if(bol !=='underline'){
+        document.getElementById('contentArea').style.textDecoration='underline';
+    }
+    else{
+        document.getElementById('contentArea').style.textDecoration='none';
+    }
+}
+
+    function reset(){
+        document.getElementById("contentArea").style.fontStyle="Normal";
+        document.getElementById("contentArea").style.textDecoration="none";
+        document.getElementById("contentArea").style.fontWeight="normal";
+
+    }
+
+    function remove() {
+        document.getElementById("contentArea").value="";
+    }
+
+    </script>
 </body>
 </html>
